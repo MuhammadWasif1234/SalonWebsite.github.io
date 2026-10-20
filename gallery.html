@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery — Velvet &amp; Shears</title>
+  <meta name="description" content="A gallery of cuts, colours, styling and bridal looks from Velvet & Shears.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="gallery">
+<main>
+
+  <section class="hero page-hero">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--gold)">Gallery</span>
+      <h1>Our work</h1>
+      <p>Browse recent looks. Tap any tile to enlarge, and use the arrow keys to navigate.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filters" id="galleryFilters" role="group" aria-label="Filter gallery"></div>
+      <div class="gallery" id="galleryGrid"></div>
+      <p class="center hint" style="margin-top:24px">Placeholder tiles — replace with your own photos by swapping each tile's background for an image.</p>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lb-nav prev" id="lbPrev" aria-label="Previous">‹</button>
+    <div class="lb-box" id="lbBox"></div>
+    <button class="lb-nav next" id="lbNext" aria-label="Next">›</button>
+  </div>
+
+  <section class="section dark cta-band">
+    <div class="container">
+      <h2>Love a look?</h2>
+      <p>Show your stylist a favourite and we'll make it yours.</p>
+      <a href="booking.html" class="btn light">Book Now</a>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

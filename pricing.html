@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing — Velvet &amp; Shears</title>
+  <meta name="description" content="Transparent salon pricing and an instant cost estimator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="pricing">
+<main>
+
+  <section class="hero page-hero">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--gold)">Pricing</span>
+      <h1>Clear, honest prices</h1>
+      <p>No surprises. Final price may vary with hair length and thickness.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Try it</span>
+        <h2>Price Estimator</h2>
+        <p class="lead">Pick your services and hair length. Book three or more and save 10%.</p>
+      </div>
+      <div class="estimator">
+        <div class="field" style="max-width:320px">
+          <label for="hairLength">Hair length</label>
+          <select id="hairLength">
+            <option value="1">Short (above shoulders)</option>
+            <option value="1.2">Medium (shoulder length)</option>
+            <option value="1.4">Long (below shoulder blades)</option>
+          </select>
+        </div>
+        <div class="est-list" id="estList"></div>
+        <div class="est-total">
+          <div>
+            <div id="estCount" class="hint"></div>
+            <div class="hint">Estimated time: <strong id="estTime">—</strong></div>
+          </div>
+          <div>Estimated total <strong id="estTotal">$0</strong></div>
+          <a href="booking.html" class="btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Full menu</span>
+        <h2>Service Price List</h2>
+        <p class="lead">Starting prices for short hair.</p>
+      </div>
+      <div id="priceTables"></div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reviews — Velvet &amp; Shears</title>
+  <meta name="description" content="Read client reviews and share your own experience at Velvet & Shears.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="reviews">
+<main>
+
+  <section class="hero page-hero">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--gold)">Reviews</span>
+      <h1>Loved by our clients</h1>
+      <p>Real feedback from real people — and you can add yours below.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="rating-summary">
+        <strong id="avgRating">0.0</strong>
+        <div><div class="star-static" id="avgStars" style="font-size:1.5rem"></div><span class="hint" id="reviewCount"></span></div>
+      </div>
+      <div class="slider" id="reviewSlider"></div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head center"><h2>All Reviews</h2></div>
+      <div class="grid c3" id="reviewGrid"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:700px">
+      <div class="section-head center">
+        <span class="eyebrow">Your turn</span>
+        <h2>Write a Review</h2>
+      </div>
+      <form class="form-card" id="reviewForm" novalidate>
+        <div class="field"><label for="rvName">Your name *</label><input id="rvName" type="text" autocomplete="name"><div class="err"></div></div>
+        <div class="field" id="ratingField">
+          <label>Rating *</label>
+          <div class="stars" role="radiogroup" aria-label="Rating">
+            <input type="radio" id="s5" name="rating" value="5"><label for="s5" title="5 stars">★</label>
+            <input type="radio" id="s4" name="rating" value="4"><label for="s4" title="4 stars">★</label>
+            <input type="radio" id="s3" name="rating" value="3"><label for="s3" title="3 stars">★</label>
+            <input type="radio" id="s2" name="rating" value="2"><label for="s2" title="2 stars">★</label>
+            <input type="radio" id="s1" name="rating" value="1"><label for="s1" title="1 star">★</label>
+          </div>
+          <div class="err">Please choose a star rating.</div>
+        </div>
+        <div class="field"><label for="rvText">Your review *</label><textarea id="rvText" placeholder="Tell us about your visit…"></textarea><div class="err"></div></div>
+        <button class="btn" type="submit">Submit Review</button>
+        <p class="hint" style="margin:14px 0 0">Reviews are stored in this browser only.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

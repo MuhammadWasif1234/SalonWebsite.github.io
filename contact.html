@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Velvet &amp; Shears</title>
+  <meta name="description" content="Contact Velvet & Shears Hair Salon: address, hours, phone and a message form.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="contact">
+<main>
+
+  <section class="hero page-hero">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--gold)">Contact</span>
+      <h1>Let's talk hair</h1>
+      <p>Questions, feedback or special requests — send us a message.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split" style="align-items:start">
+
+      <div>
+        <form class="form-card" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field"><label for="ctName">Name *</label><input id="ctName" type="text" autocomplete="name"><div class="err"></div></div>
+            <div class="field"><label for="ctEmail">Email *</label><input id="ctEmail" type="email" autocomplete="email"><div class="err"></div></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="ctPhone">Phone (optional)</label><input id="ctPhone" type="tel" autocomplete="tel"><div class="err"></div></div>
+            <div class="field"><label for="ctSubject">Subject *</label>
+              <select id="ctSubject">
+                <option value="">Choose…</option>
+                <option>General enquiry</option>
+                <option>Booking help</option>
+                <option>Bridal &amp; events</option>
+                <option>Feedback</option>
+                <option>Careers</option>
+              </select><div class="err"></div></div>
+          </div>
+          <div class="field"><label for="ctMessage">Message *</label><textarea id="ctMessage" placeholder="How can we help?"></textarea><div class="err"></div></div>
+          <button class="btn" type="submit">Send Message</button>
+          <p class="hint" style="margin:14px 0 0">Your message and an auto-saved draft are stored in this browser's localStorage — there is no server.</p>
+        </form>
+      </div>
+
+      <div>
+        <h2 style="font-size:1.6rem">Visit the salon</h2>
+        <ul class="info-list">
+          <li><span class="ic">📍</span><div><strong>Address</strong><br>25 Rosewood Lane, Karachi</div></li>
+          <li><span class="ic">📞</span><div><strong>Phone</strong><br><a href="tel:+920000000000">+92 000 000 0000</a></div></li>
+          <li><span class="ic">✉️</span><div><strong>Email</strong><br><a href="mailto:hello@velvetandshears.example">hello@velvetandshears.example</a></div></li>
+        </ul>
+        <h3 style="margin-top:26px">Opening hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>10:00 – 19:00</td></tr>
+          <tr><td>Saturday</td><td>10:00 – 18:00</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <div class="map"><div><div style="font-size:2.4rem">🗺️</div><strong>Map placeholder</strong><br><span class="hint">Embed Google Maps here</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container" style="max-width:860px">
+      <div class="toolbar">
+        <h2 style="font-size:1.6rem;margin:0">Saved Messages (<span id="msgCount">0</span>)</h2>
+        <div style="display:flex;gap:8px">
+          <button class="btn small outline" id="exportMessages" type="button">Export JSON</button>
+          <button class="btn small danger" id="clearMessages" type="button">Clear All</button>
+        </div>
+      </div>
+      <p class="hint">This list is read straight from localStorage, so you can confirm that submissions are being saved. It persists after refresh and browser restart.</p>
+      <div id="messageList"></div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Online — Velvet &amp; Shears</title>
+  <meta name="description" content="Book your hair appointment online with Velvet & Shears.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="booking">
+<main>
+
+  <section class="hero page-hero">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--gold)">Book online</span>
+      <h1>Reserve your appointment</h1>
+      <p>Open Monday–Saturday. Taken time slots are disabled automatically.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:860px">
+      <form class="form-card" id="bookingForm" novalidate>
+        <div class="form-row">
+          <div class="field"><label for="bkName">Full name *</label><input id="bkName" type="text" autocomplete="name"><div class="err"></div></div>
+          <div class="field"><label for="bkPhone">Phone *</label><input id="bkPhone" type="tel" autocomplete="tel"><div class="err"></div></div>
+        </div>
+        <div class="field"><label for="bkEmail">Email *</label><input id="bkEmail" type="email" autocomplete="email"><div class="err"></div></div>
+        <div class="form-row">
+          <div class="field"><label for="bkService">Service *</label><select id="bkService"></select><div class="err"></div></div>
+          <div class="field"><label for="bkStylist">Stylist *</label><select id="bkStylist"></select><div class="err"></div></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="bkDate">Date *</label><input id="bkDate" type="date"><div class="err"></div></div>
+          <div class="field"><label for="bkTime">Time *</label><select id="bkTime"><option value="">Choose a time…</option></select><div class="err"></div></div>
+        </div>
+        <div class="field"><label for="bkNotes">Notes (optional)</label><textarea id="bkNotes" style="min-height:90px" placeholder="Allergies, inspiration, anything we should know…"></textarea></div>
+        <button class="btn" type="submit">Confirm Appointment</button>
+        <p class="hint" style="margin:14px 0 0">Appointments are saved in this browser only (localStorage).</p>
+      </form>
+
+      <div class="records">
+        <h2 style="font-size:1.6rem">Your Appointments (<span id="bookingCount">0</span>)</h2>
+        <div id="bookingList"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
